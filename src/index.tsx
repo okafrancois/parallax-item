@@ -30,18 +30,6 @@ class ParallaxItem extends HTMLElement {
     }
 
     connectedCallback() {
-        this.style.cssText = `
-          --parallax-z: 0;
-          --parallax-x: 0;
-          --parallax-y: 0;
-          --parallax-ease: linear;
-          --parallax-delay: 0s;
-          display: block;
-          transition: transform var(--parallax-ease) var(--parallax-delay);
-          transform: translate3d(var(--parallax-x), var(--parallax-y), var(--parallax-z));
-          will-change: transform;
-        `;
-
         this.yspeed = this.getSpeeds(this.dataset.yspeed ?? '0');
         this.xspeed = this.getSpeeds(this.dataset.xspeed ?? '0');
         this.activeYSpeed = 0;
