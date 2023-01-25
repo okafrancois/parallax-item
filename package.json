@@ -1,0 +1,50 @@
+{
+  "name": "parallax-item",
+  "version": "1.1.3",
+  "description": "A simple parallax html web component package",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:okafrancois/parallax-item.git"
+  },
+  "keywords": [
+    "parallax",
+    "web",
+    "custom",
+    "component"
+  ],
+  "author": "<a href='cosavostra.com'>Cosa Vostra</a>",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "main": "dist/index.js",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "rollup -c --bundleConfigAsCjs",
+    "start": "rollup -c -w"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "babel-core": "^6.26.3",
+    "babel-runtime": "^6.26.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup": "^3.10.1",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "sass": "^1.57.1",
+    "typescript": "^4.9.4"
+  }
+}
